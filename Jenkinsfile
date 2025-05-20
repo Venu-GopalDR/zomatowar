@@ -76,7 +76,7 @@ stage('docker login') {
             steps{
                 sh"""
                 docker rm -f app
-                docker run -it -d --name app -p 8081:8081 ${DOCKERHUB_USERNAME}/zomato
+                docker run -d --name app -p 8081:8081 ${DOCKERHUB_USERNAME}/zomato
                 """
               }
             }
